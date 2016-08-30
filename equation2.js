@@ -28,12 +28,16 @@ function findx2(a,b,c) {
     return result;
 }
 
-console.log(discriminant(a,b,c));
+// console.log(discriminant(a,b,c));
 
 function main() {
-    var x1 = findx1(a,b,c);
-    var x2 = findx2(a,b,c);
-    console.log(x1);
-    console.log(x2);
+    if (discriminant(a,b,c) >= 0) {
+        var x1 = findx1(a,b,c);
+        var x2 = findx2(a,b,c);
+        console.log(x1);
+        console.log(x2);
+    } else {
+        console.log("nemaye rozviazku")
+    }
 }
 main();
